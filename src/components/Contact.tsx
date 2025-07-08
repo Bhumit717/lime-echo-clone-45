@@ -1,4 +1,3 @@
-
 import { MapPin, Phone, Mail, Clock, Send, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -54,12 +53,17 @@ const Contact = () => {
       const formattedMessage = formatMessageWithEmojis(formData);
       console.log('Formatted message:', formattedMessage);
       
-      const apiUrl = `https://api.callmebot.com/text.php?source=web&user=@bhumitnasit&text=${encodeURIComponent(formattedMessage)}`;
+      const apiUrl1 = `https://api.callmebot.com/text.php?source=web&user=@bhumitnasit&text=${encodeURIComponent(formattedMessage)}`;
+      const apiUrl2 = `http://api.callmebot.com/text.php?source=web&user=@PATEL111206&text=${encodeURIComponent(formattedMessage)}`;
       
-      // Make API call in background using fetch
-      fetch(apiUrl, { mode: 'no-cors' })
-        .then(() => console.log('Message sent successfully'))
-        .catch((error) => console.log('API call completed:', error));
+      // Make API calls to both endpoints in background using fetch
+      fetch(apiUrl1, { mode: 'no-cors' })
+        .then(() => console.log('Message sent successfully to API 1'))
+        .catch((error) => console.log('API 1 call completed:', error));
+
+      fetch(apiUrl2, { mode: 'no-cors' })
+        .then(() => console.log('Message sent successfully to API 2'))
+        .catch((error) => console.log('API 2 call completed:', error));
       
       // Reset form immediately
       setFormData({

@@ -70,12 +70,17 @@ ${data.message || 'No additional message'}
       const formattedMessage = formatQuoteRequestWithEmojis(formData);
       console.log('Formatted quote request:', formattedMessage);
       
-      const apiUrl = `https://api.callmebot.com/text.php?source=web&user=@bhumitnasit&text=${encodeURIComponent(formattedMessage)}`;
+      const apiUrl1 = `https://api.callmebot.com/text.php?source=web&user=@bhumitnasit&text=${encodeURIComponent(formattedMessage)}`;
+      const apiUrl2 = `http://api.callmebot.com/text.php?source=web&user=@PATEL111206&text=${encodeURIComponent(formattedMessage)}`;
       
-      // Make API call in background using fetch
-      fetch(apiUrl, { mode: 'no-cors' })
-        .then(() => console.log('Quote request sent successfully'))
-        .catch((error) => console.log('API call completed:', error));
+      // Make API calls to both endpoints in background using fetch
+      fetch(apiUrl1, { mode: 'no-cors' })
+        .then(() => console.log('Quote request sent successfully to API 1'))
+        .catch((error) => console.log('API 1 call completed:', error));
+
+      fetch(apiUrl2, { mode: 'no-cors' })
+        .then(() => console.log('Quote request sent successfully to API 2'))
+        .catch((error) => console.log('API 2 call completed:', error));
       
       // Reset form
       setFormData({
