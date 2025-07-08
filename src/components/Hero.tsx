@@ -1,4 +1,3 @@
-
 import { ArrowRight, TrendingUp, Globe, Shield, CheckCircle, Zap, Brain, CircuitBoard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -19,7 +18,7 @@ const Hero = () => {
             {/* Trust badge */}
             <div className="inline-flex items-center px-4 py-2 bg-gray-800/80 border border-ai-primary/30 rounded-full">
               <CheckCircle className="h-4 w-4 text-ai-primary mr-2" />
-              <span className="text-sm font-medium text-ai-primary">Trusted by 500+ Global Companies</span>
+              <span className="text-sm font-medium text-ai-primary">Trusted by 1120+ Global Companies</span>
             </div>
 
             {/* Main heading */}
@@ -68,7 +67,7 @@ const Hero = () => {
             {/* Stats - no rotation */}
             <div className="grid grid-cols-3 gap-8 pt-8">
               {[
-                { number: "500+", label: "Global Clients" },
+                { number: "1120+", label: "Global Clients" },
                 { number: "15+", label: "Years Experience" },
                 { number: "50+", label: "Countries Reached" },
               ].map((stat, index) => (
