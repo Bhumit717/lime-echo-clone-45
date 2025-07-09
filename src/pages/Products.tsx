@@ -18,14 +18,96 @@ const Products = () => {
   }, []);
 
   const handleDownloadCatalog = () => {
-    // Create a dummy PDF download
-    const link = document.createElement('a');
-    link.href = 'data:application/pdf;base64,JVBERi0xLjQKJcfsj6IKMSAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMiAwIFIKPj4KZW5kb2JqCgoyIDAgb2JqCjw8Ci9UeXBlIC9QYWdlcwovS2lkcyBbMyAwIFJdCi9Db3VudCAxCj4+CmVuZG9iagoKMyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDIgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoKNyAwIG9iago8PAovUHJvY1NldCBbL1BERiAvVGV4dF0KL0ZvbnQgPDwKL0YxIDUgMCBSCj4+Cj4+CmVuZG9iagoKNCAwIG9iago8PAovTGVuZ3RoIDQ0Cj4+CnN0cmVhbQpCVApETjUwIDc1MiBUZAovRjEgMTIgVGYKKFByb2R1Y3QgQ2F0YWxvZyAtIFBhdGVsIEV4cG9ydHMpIFRqCkVUCmVuZHN0cmVhbQplbmRvYmoKNSAwIG9iago8PAovVHlwZSAvRm9udAovU3VidHlwZSAvVHlwZTEKL0Jhc2VGb250IC9IZWx2ZXRpY2EKPj4KZW5kb2JqCnhyZWYKMCA2CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA0MiAwMDAwMCBuIAowMDAwMDAwMDkzIDAwMDAwIG4gCjAwMDAwMDAxNTAgMDAwMDAgbiAKMDAwMDAwMDI1NSAwMDAwMCBuIAowMDAwMDAwMzgwIDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgNgovUm9vdCAxIDAgUgo+PQpzdGFydHhyZWYKNDc5CiUlRU9G';
-    link.download = 'Patel-Exports-Catalog.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    alert('Catalog downloaded successfully!');
+    try {
+      // Create a simple PDF-like content
+      const pdfContent = `
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/ProcSet [/PDF /Text]
+/Font <<
+/F1 5 0 R
+>>
+>>
+>>
+endobj
+
+4 0 obj
+<<
+/Length 80
+>>
+stream
+BT
+/F1 12 Tf
+50 750 Td
+(Patel Exports - Product Catalog) Tj
+ET
+endstream
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000053 00000 n 
+0000000125 00000 n 
+0000000348 00000 n 
+0000000477 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+554
+%%EOF`;
+
+      // Create blob and download
+      const blob = new Blob([pdfContent], { type: 'application/pdf' });
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Patel-Exports-Catalog.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+      
+      // Show success message
+      console.log('Catalog downloaded successfully!');
+      alert('Product catalog downloaded successfully!');
+    } catch (error) {
+      console.error('Error downloading catalog:', error);
+      alert('Error downloading catalog. Please try again.');
+    }
   };
 
   const handleViewCertificates = () => {
@@ -433,7 +515,7 @@ const Products = () => {
                   </div>
                   <div className="flex items-center justify-center text-white/90 hover:text-white transition-colors cursor-pointer">
                     <MapPin className="h-6 w-6 mr-3" />
-                    <span className="font-semibold">Mumbai, India</span>
+                    <span className="font-semibold">Rajkot, Gujarat, India</span>
                   </div>
                 </div>
               </div>
