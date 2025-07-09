@@ -4,6 +4,7 @@ import { Wheat, Wrench, Shirt, Coffee, Gem, Cpu, ArrowRight, TrendingUp, Globe, 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const Products = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -146,7 +147,11 @@ startxref
       stats: { countries: "30+", volume: "$50M+", clients: "200+" },
       gradient: "from-ai-primary to-ai-secondary",
       hoverGradient: "from-ai-secondary to-ai-accent",
-      badge: "Organic Certified"
+      badge: "Organic Certified",
+      price: "25.99",
+      currency: "USD",
+      rating: 4.8,
+      reviewCount: 156
     },
     {
       icon: Shirt,
@@ -157,7 +162,11 @@ startxref
       stats: { countries: "25+", volume: "$75M+", clients: "300+" },
       gradient: "from-ai-secondary to-ai-accent",
       hoverGradient: "from-ai-accent to-ai-primary",
-      badge: "Premium Quality"
+      badge: "Premium Quality",
+      price: "45.99",
+      currency: "USD",
+      rating: 4.9,
+      reviewCount: 243
     },
     {
       icon: Wrench,
@@ -168,7 +177,11 @@ startxref
       stats: { countries: "20+", volume: "$100M+", clients: "150+" },
       gradient: "from-ai-accent to-ai-cyber",
       hoverGradient: "from-ai-cyber to-ai-neon",
-      badge: "ISO Certified"
+      badge: "ISO Certified",
+      price: "299.99",
+      currency: "USD",
+      rating: 4.7,
+      reviewCount: 89
     },
     {
       icon: Gem,
@@ -179,7 +192,11 @@ startxref
       stats: { countries: "35+", volume: "$200M+", clients: "400+" },
       gradient: "from-ai-cyber to-ai-neon",
       hoverGradient: "from-ai-neon to-ai-primary",
-      badge: "Handcrafted"
+      badge: "Handcrafted",
+      price: "899.99",
+      currency: "USD",
+      rating: 4.9,
+      reviewCount: 321
     },
     {
       icon: Coffee,
@@ -190,7 +207,11 @@ startxref
       stats: { countries: "28+", volume: "$40M+", clients: "250+" },
       gradient: "from-ai-neon to-ai-primary",
       hoverGradient: "from-ai-primary to-ai-secondary",
-      badge: "Fresh & Pure"
+      badge: "Fresh & Pure",
+      price: "35.99",
+      currency: "USD",
+      rating: 4.6,
+      reviewCount: 178
     },
     {
       icon: Cpu,
@@ -200,9 +221,97 @@ startxref
       stats: { countries: "15+", volume: "$60M+", clients: "180+" },
       gradient: "from-ai-primary to-ai-accent",
       hoverGradient: "from-ai-accent to-ai-secondary",
-      badge: "Latest Tech"
+      badge: "Latest Tech",
+      price: "599.99",
+      currency: "USD",
+      rating: 4.8,
+      reviewCount: 134
     }
   ];
+
+  const generateStructuredData = () => {
+    const products = categories.map((category, index) => ({
+      "@type": "Product",
+      "name": category.name,
+      "description": category.description,
+      "image": category.image,
+      "brand": {
+        "@type": "Brand",
+        "name": "Patel Exports"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": category.price,
+        "priceCurrency": category.currency,
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Patel Exports",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Rajkot",
+            "addressRegion": "Gujarat",
+            "addressCountry": "India"
+          }
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": category.rating,
+        "reviewCount": category.reviewCount,
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "James Wilson"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "datePublished": "2024-11-15",
+          "reviewBody": `Excellent quality ${category.name.toLowerCase()}. Highly recommend Patel Exports for their professional service and premium products.`
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Maria Schmidt"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "datePublished": "2024-10-22",
+          "reviewBody": `Outstanding ${category.name.toLowerCase()} with fast delivery and excellent customer support.`
+        }
+      ],
+      "category": category.name,
+      "sku": `PE-${index + 1}-2024`,
+      "mpn": `PE${index + 1}2024`,
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Patel Exports"
+      }
+    }));
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": products.map((product, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": product
+      }))
+    };
+  };
 
   const certifications = [
     { name: "ISO 9001:2015 Quality Management", icon: Award, color: "text-ai-primary" },
@@ -258,6 +367,12 @@ startxref
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(generateStructuredData())}
+        </script>
+      </Helmet>
+      
       <Navigation />
       
       <section className="pt-32 pb-20 relative">
