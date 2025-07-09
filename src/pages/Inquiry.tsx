@@ -71,7 +71,7 @@ ${data.message || 'No additional message'}
       console.log('Formatted quote request:', formattedMessage);
       
       const apiUrl1 = `https://api.callmebot.com/text.php?source=web&user=@bhumitnasit&text=${encodeURIComponent(formattedMessage)}`;
-      const apiUrl2 = `http://api.callmebot.com/text.php?source=web&user=@PATEL111206&text=${encodeURIComponent(formattedMessage)}`;
+      const apiUrl2 = `https://api.callmebot.com/text.php?source=web&user=@PATEL111206&text=${encodeURIComponent(formattedMessage)}`;
       
       // Make API calls to both endpoints in background using fetch
       fetch(apiUrl1, { mode: 'no-cors' })
