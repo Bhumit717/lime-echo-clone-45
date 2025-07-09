@@ -53,7 +53,7 @@ const Navigation = () => {
                 <Mail size={16} className="group-hover:scale-110 transition-transform duration-300" />
                 <div className="absolute -inset-1 bg-teal-400 rounded-full opacity-0 group-hover:opacity-20 animate-pulse"></div>
               </div>
-              <span className="font-semibold group-hover:font-bold transition-all duration-300">info@patelimpex.com</span>
+              <span className="font-semibold group-hover:font-bold transition-all duration-300">bhumitnasit1@gmail.com</span>
             </div>
             <div className="hidden md:flex items-center space-x-3 text-blue-600 group cursor-pointer">
               <Globe size={16} className="group-hover:rotate-12 transition-transform duration-300" />

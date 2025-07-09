@@ -8,6 +8,7 @@ import Products from "@/components/Products";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import OpeningAnimation from "@/components/OpeningAnimation";
+import WhatsAppChat from "@/components/WhatsAppChat";
 
 const Index = () => {
   const [showAnimation, setShowAnimation] = useState(true);
@@ -29,6 +30,7 @@ const Index = () => {
       <Services />
       <Contact />
       <Footer />
+      <WhatsAppChat />
     </div>
   );
 };

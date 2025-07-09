@@ -1,5 +1,7 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WhatsAppChat from "@/components/WhatsAppChat";
 import { MapPin, Phone, Mail, Clock, Send, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -301,6 +303,7 @@ const Contact = () => {
       </section>
 
       <Footer />
+      <WhatsAppChat />
     </div>
   );
 };

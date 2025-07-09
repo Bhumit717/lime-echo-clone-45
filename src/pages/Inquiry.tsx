@@ -1,5 +1,7 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WhatsAppChat from "@/components/WhatsAppChat";
 import { Send, Package, Globe, TrendingUp, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -353,6 +355,7 @@ ${data.message || 'No additional message'}
       </section>
 
       <Footer />
+      <WhatsAppChat />
     </div>
   );
 };
