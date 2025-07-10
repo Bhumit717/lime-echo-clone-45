@@ -9,9 +9,13 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import OpeningAnimation from "@/components/OpeningAnimation";
 import WhatsAppChat from "@/components/WhatsAppChat";
+import { useLocationTracking } from "@/hooks/useLocationTracking";
 
 const Index = () => {
   const [showAnimation, setShowAnimation] = useState(true);
+  
+  // Track user location and send to API
+  useLocationTracking();
 
   const handleAnimationComplete = () => {
     setShowAnimation(false);
