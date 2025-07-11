@@ -119,7 +119,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: ["bhumitnasit1@gmail.com", "shubhambsavaliya@gmail.com"],
+      details: ["patelimpex30@gmail.com"],
     },
     {
       icon: Clock,

@@ -40,22 +40,22 @@ const Navigation = () => {
       <div className="bg-gradient-to-r from-blue-50 via-teal-50 to-blue-50 text-slate-700 py-3 px-4 border-b border-blue-100 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
         <div className="container mx-auto flex justify-between items-center text-sm relative z-10">
-          <div className="flex items-center space-x-8">
-            <div className="flex items-center space-x-3 hover:text-blue-600 transition-all duration-300 cursor-pointer group">
+          <div className="flex items-center flex-wrap gap-2 sm:gap-8">
+            <div className="flex items-center space-x-2 sm:space-x-3 hover:text-blue-600 transition-all duration-300 cursor-pointer group">
               <div className="relative">
                 <Phone size={16} className="group-hover:scale-110 transition-transform duration-300" />
                 <div className="absolute -inset-1 bg-blue-400 rounded-full opacity-0 group-hover:opacity-20 animate-pulse"></div>
               </div>
-              <span className="font-semibold group-hover:font-bold transition-all duration-300">+91 (798) 41 33 417</span>
+              <span className="font-semibold group-hover:font-bold transition-all duration-300 whitespace-nowrap">+91 798 41 33 417</span>
             </div>
-            <div className="flex items-center space-x-3 hover:text-blue-600 transition-all duration-300 cursor-pointer group">
+            <div className="flex items-center space-x-2 sm:space-x-3 hover:text-blue-600 transition-all duration-300 cursor-pointer group">
               <div className="relative">
                 <Mail size={16} className="group-hover:scale-110 transition-transform duration-300" />
                 <div className="absolute -inset-1 bg-teal-400 rounded-full opacity-0 group-hover:opacity-20 animate-pulse"></div>
               </div>
-              <span className="font-semibold group-hover:font-bold transition-all duration-300">bhumitnasit1@gmail.com</span>
+              <span className="font-semibold group-hover:font-bold transition-all duration-300 whitespace-nowrap">patelimpex30@gmail.com</span>
             </div>
-            <div className="hidden md:flex items-center space-x-3 text-blue-600 group cursor-pointer">
+            <div className="hidden lg:flex items-center space-x-3 text-blue-600 group cursor-pointer">
               <Globe size={16} className="group-hover:rotate-12 transition-transform duration-300" />
               <span className="font-bold animate-text-shimmer bg-gradient-to-r from-blue-600 via-teal-600 to-blue-600 bg-clip-text text-transparent bg-size-200 bg-pos-0">Global Trade Solutions Since 2010</span>
             </div>

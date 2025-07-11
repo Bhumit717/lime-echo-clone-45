@@ -1,3 +1,4 @@
+
 import { Facebook, Twitter, Linkedin, Instagram, Phone, Mail, MapPin, Globe, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -97,7 +98,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-slate-300 hover:text-blue-400 transition-colors cursor-pointer">
                 <Mail className="h-5 w-5 text-teal-400" />
-                <span>bhumitnasit1@gmail.com</span>
+                <span>patelimpex30@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3 text-slate-300">
                 <Globe className="h-5 w-5 text-teal-400" />
