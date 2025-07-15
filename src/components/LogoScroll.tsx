@@ -1,23 +1,23 @@
-import tataLogo from "@/assets/logos/tata-logo.png";
-import relianceLogo from "@/assets/logos/reliance-logo.png";
-import mahindraLogo from "@/assets/logos/mahindra-logo.png";
-import airtelLogo from "@/assets/logos/airtel-logo.png";
-import wiproLogo from "@/assets/logos/wipro-logo.png";
+import globalTradeLogo from "@/assets/logos/global-trade-logo.png";
+import europeanImportLogo from "@/assets/logos/european-import-logo.png";
+import asiaPacificLogo from "@/assets/logos/asia-pacific-logo.png";
+import middleEastLogo from "@/assets/logos/middle-east-logo.png";
+import nordicImportLogo from "@/assets/logos/nordic-import-logo.png";
 
 const LogoScroll = () => {
   const logos = [
-    { src: tataLogo, alt: "Tata Group" },
-    { src: relianceLogo, alt: "Reliance Industries" },
-    { src: mahindraLogo, alt: "Mahindra Group" },
-    { src: airtelLogo, alt: "Bharti Airtel" },
-    { src: wiproLogo, alt: "Wipro" },
+    { src: globalTradeLogo, alt: "Global Trade Solutions LLC" },
+    { src: europeanImportLogo, alt: "European Import Partners" },
+    { src: asiaPacificLogo, alt: "Asia Pacific Trading Co" },
+    { src: middleEastLogo, alt: "Middle East Import Group" },
+    { src: nordicImportLogo, alt: "Nordic Import Solutions" },
   ];
 
   return (
     <section className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8 text-foreground">
-          Trusted by Leading Companies
+          Trusted by Leading Global Importers
         </h2>
         <div className="relative overflow-hidden">
           <div className="flex animate-scroll-infinite">
