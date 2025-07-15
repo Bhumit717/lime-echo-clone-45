@@ -129,4 +129,17 @@ All colors MUST be HSL.
   .ai-border {
     border: 1px solid hsl(var(--ai-primary) / 0.3);
   }
+  
+  .animate-scroll-infinite {
+    animation: scroll-infinite 20s linear infinite;
+  }
+  
+  @keyframes scroll-infinite {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }

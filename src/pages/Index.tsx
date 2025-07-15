@@ -9,6 +9,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import OpeningAnimation from "@/components/OpeningAnimation";
 import WhatsAppChat from "@/components/WhatsAppChat";
+import LogoScroll from "@/components/LogoScroll";
 import { useLocationTracking } from "@/hooks/useLocationTracking";
 
 const Index = () => {
@@ -29,6 +30,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
+      <LogoScroll />
       <Products />
       <About />
       <Services />
