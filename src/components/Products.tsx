@@ -1,5 +1,4 @@
-
-import { Wheat, Wrench, Shirt, Coffee, Gem, Cpu } from "lucide-react";
+import { Wheat, Wrench, Shirt, Coffee, Gem, Cpu, Pill, Tractor, Package, Leaf, Recycle } from "lucide-react";
 
 const Products = () => {
   const categories = [
@@ -10,10 +9,28 @@ const Products = () => {
       image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=400&q=80",
     },
     {
+      icon: Pill,
+      name: "Pharma & Pesticides", 
+      items: ["Pharmaceuticals", "Medical Supplies", "Pesticides", "Fertilizers", "Veterinary Products", "Health Supplements"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=400&q=80",
+    },
+    {
+      icon: Tractor,
+      name: "Agriculture Equipment & Vehicles",
+      items: ["Tractors", "Harvesters", "Farm Equipment", "Irrigation Systems", "Agricultural Vehicles", "Farming Tools"],
+      image: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=400&q=80",
+    },
+    {
       icon: Wrench,
       name: "Industrial Equipment",
       items: ["Machinery", "Tools", "Electronics", "Auto Parts", "Steel", "Hardware"],
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=400&q=80",
+    },
+    {
+      icon: Package,
+      name: "Plastic Products",
+      items: ["Plastic Containers", "Packaging Materials", "Industrial Plastics", "Household Items", "Medical Plastics", "Automotive Parts"],
+      image: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=400&q=80",
     },
     {
       icon: Shirt,
@@ -26,6 +43,18 @@ const Products = () => {
       name: "Food & Beverages",
       items: ["Processed Foods", "Beverages", "Snacks", "Condiments", "Frozen Foods", "Dairy"],
       image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=80",
+    },
+    {
+      icon: Leaf,
+      name: "Biodegradable Products",
+      items: ["Biodegradable Packaging", "Compostable Materials", "Natural Fibers", "Organic Containers", "Plant-based Products", "Sustainable Materials"],
+      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=400&q=80",
+    },
+    {
+      icon: Recycle,
+      name: "Eco-Friendly Products",
+      items: ["Renewable Energy Products", "Solar Equipment", "Green Technology", "Recycled Materials", "Sustainable Solutions", "Environmental Products"],
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=80",
     },
     {
       icon: Gem,
