@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Wheat, Wrench, Shirt, Coffee, Gem, Cpu, ArrowRight, TrendingUp, Globe, Star, Eye, Download, MessageCircle, Phone, Mail, MapPin, Calendar, Award, CheckCircle, Users, Target, Zap, Sparkles, Heart, ThumbsUp, Clock, Shield, Calculator, Truck } from "lucide-react";
+import { Wheat, Wrench, Shirt, Coffee, Gem, Cpu, Pill, Tractor, Package, Leaf, Recycle, ArrowRight, TrendingUp, Globe, Star, Eye, Download, MessageCircle, Phone, Mail, MapPin, Calendar, Award, CheckCircle, Users, Target, Zap, Sparkles, Heart, ThumbsUp, Clock, Shield, Calculator, Truck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
@@ -154,6 +154,36 @@ startxref
       reviewCount: 156
     },
     {
+      icon: Pill,
+      name: "Pharma & Pesticides",
+      description: "High-quality pharmaceutical products, medical supplies, and pesticides meeting global regulatory standards.",
+      items: ["Pharmaceuticals", "Medical Supplies", "Pesticides", "Fertilizers", "Veterinary Products", "Health Supplements"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80",
+      stats: { countries: "20+", volume: "$30M+", clients: "120+" },
+      gradient: "from-ai-accent to-ai-cyber",
+      hoverGradient: "from-ai-cyber to-ai-primary",
+      badge: "FDA Approved",
+      price: "85.99",
+      currency: "USD",
+      rating: 4.7,
+      reviewCount: 98
+    },
+    {
+      icon: Tractor,
+      name: "Agriculture Equipment & Vehicles",
+      description: "Heavy-duty agricultural machinery and vehicles designed for efficient farming operations worldwide.",
+      items: ["Tractors", "Harvesters", "Farm Equipment", "Irrigation Systems", "Agricultural Vehicles", "Farming Tools"],
+      image: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=600&q=80",
+      stats: { countries: "15+", volume: "$80M+", clients: "85+" },
+      gradient: "from-ai-cyber to-ai-neon",
+      hoverGradient: "from-ai-neon to-ai-secondary",
+      badge: "Heavy Duty",
+      price: "12999.99",
+      currency: "USD",
+      rating: 4.6,
+      reviewCount: 67
+    },
+    {
       icon: Shirt,
       name: "Textiles & Garments",
       description: "High-quality textiles and readymade garments from cotton fabrics to silk products, serving global fashion markets.",
@@ -167,6 +197,21 @@ startxref
       currency: "USD",
       rating: 4.9,
       reviewCount: 243
+    },
+    {
+      icon: Package,
+      name: "Plastic Products",
+      description: "Durable plastic products and packaging materials for industrial and consumer applications worldwide.",
+      items: ["Plastic Containers", "Packaging Materials", "Industrial Plastics", "Household Items", "Medical Plastics", "Automotive Parts"],
+      image: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=600&q=80",
+      stats: { countries: "25+", volume: "$45M+", clients: "180+" },
+      gradient: "from-ai-secondary to-ai-accent",
+      hoverGradient: "from-ai-accent to-ai-cyber",
+      badge: "BPA Free",
+      price: "15.99",
+      currency: "USD",
+      rating: 4.5,
+      reviewCount: 134
     },
     {
       icon: Wrench,
@@ -212,6 +257,36 @@ startxref
       currency: "USD",
       rating: 4.6,
       reviewCount: 178
+    },
+    {
+      icon: Leaf,
+      name: "Biodegradable Products",
+      description: "Environmentally friendly biodegradable products supporting sustainable business practices worldwide.",
+      items: ["Biodegradable Packaging", "Compostable Materials", "Natural Fibers", "Organic Containers", "Plant-based Products", "Sustainable Materials"],
+      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80",
+      stats: { countries: "22+", volume: "$25M+", clients: "160+" },
+      gradient: "from-ai-primary to-ai-accent",
+      hoverGradient: "from-ai-accent to-ai-secondary",
+      badge: "100% Natural",
+      price: "42.99",
+      currency: "USD",
+      rating: 4.8,
+      reviewCount: 112
+    },
+    {
+      icon: Recycle,
+      name: "Eco-Friendly Products",
+      description: "Sustainable eco-friendly products including renewable energy solutions and green technology innovations.",
+      items: ["Renewable Energy Products", "Solar Equipment", "Green Technology", "Recycled Materials", "Sustainable Solutions", "Environmental Products"],
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80",
+      stats: { countries: "18+", volume: "$35M+", clients: "95+" },
+      gradient: "from-ai-secondary to-ai-cyber",
+      hoverGradient: "from-ai-cyber to-ai-accent",
+      badge: "Carbon Neutral",
+      price: "78.99",
+      currency: "USD",
+      rating: 4.9,
+      reviewCount: 87
     },
     {
       icon: Cpu,
