@@ -3,6 +3,11 @@ import europeanImportLogo from "@/assets/logos/european-import-logo.png";
 import asiaPacificLogo from "@/assets/logos/asia-pacific-logo.png";
 import middleEastLogo from "@/assets/logos/middle-east-logo.png";
 import nordicImportLogo from "@/assets/logos/nordic-import-logo.png";
+import americasTradeLogo from "@/assets/logos/americas-trade-logo.png";
+import africanImportLogo from "@/assets/logos/african-import-logo.png";
+import pacificRimLogo from "@/assets/logos/pacific-rim-logo.png";
+import continentalTradeLogo from "@/assets/logos/continental-trade-logo.png";
+import internationalBuyersLogo from "@/assets/logos/international-buyers-logo.png";
 
 const LogoScroll = () => {
   const logos = [
@@ -11,6 +16,11 @@ const LogoScroll = () => {
     { src: asiaPacificLogo, alt: "Asia Pacific Trading Co" },
     { src: middleEastLogo, alt: "Middle East Import Group" },
     { src: nordicImportLogo, alt: "Nordic Import Solutions" },
+    { src: americasTradeLogo, alt: "Americas Trade Network" },
+    { src: africanImportLogo, alt: "African Import Alliance" },
+    { src: pacificRimLogo, alt: "Pacific Rim Importers" },
+    { src: continentalTradeLogo, alt: "Continental Trade Corp" },
+    { src: internationalBuyersLogo, alt: "International Buyers Group" },
   ];
 
   return (
@@ -20,7 +30,7 @@ const LogoScroll = () => {
           Trusted by Leading Global Importers
         </h2>
         <div className="relative overflow-hidden">
-          <div className="flex animate-scroll-infinite">
+          <div className="flex animate-scroll-fast">
             {/* First set of logos */}
             {logos.map((logo, index) => (
               <div
@@ -30,7 +40,7 @@ const LogoScroll = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-w-full max-h-full object-contain transition-all duration-300"
                 />
               </div>
             ))}
@@ -43,7 +53,7 @@ const LogoScroll = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-w-full max-h-full object-contain transition-all duration-300"
                 />
               </div>
             ))}

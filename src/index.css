@@ -134,6 +134,10 @@ All colors MUST be HSL.
     animation: scroll-infinite 20s linear infinite;
   }
   
+  .animate-scroll-fast {
+    animation: scroll-infinite 10s linear infinite;
+  }
+  
   @keyframes scroll-infinite {
     0% {
       transform: translateX(0);

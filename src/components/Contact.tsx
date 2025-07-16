@@ -115,7 +115,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: ["bhumitnasit1@gmail.com", "shubhambsavaliya@gmail.com"],
+      details: ["patelimpex011@gmail.com", "patelimpex012@gmail.com", "patelimpexsocialmedia@gmail.com"],
     },
     {
       icon: Clock,
